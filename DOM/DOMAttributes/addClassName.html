@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myDiv = document.createElement('div')
+        myDiv.id = 'divID'
+        myDiv.className = 'divClass '
+        myDiv.className += 'user-app'
+        myDiv.innerText = '<h1> Hello Javascript </h1>'
+        myDiv.innerHTML = '<h1> Hello web </h1>'
+        document.body.appendChild(myDiv)
+        console.log('myDiv'); 
+    </script>
+</body>
+</html>

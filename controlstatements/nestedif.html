@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var userName = prompt('Please, Enter A Name').toLowerCase().trim();
+        var userAge = parseInt(prompt('Please Enter Your Age'));
+        var nat = prompt('Please, Enter Your Nationality').toLowerCase().trim();
+
+        if (userName === 'peter') {
+            if (userAge >= 18) {
+                if (nat == 'nigerian') {
+                    console.log('You are elegible to vote')
+                } else {
+                    console.log('You are elegible to vote');
+                }
+            }
+            else {
+                console.log('You are too young to vote');
+            }
+        }
+        else {
+            console.log('Please, Check your name');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">My Heading</h1>
+        <p id="hint"><span>This is some text</span></p>
+    </div>
+
+    <script>
+        let main = document.getElementById("main");
+        console.log(main.firstChild.nodeName); //prints: #Text//
+
+        let hint = document.getElementById("hint");
+        console.log(hint.firstChild.nodeName); //prints: span//
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sunt architecto excepturi tempora aliquid voluptatibus exercitationem minima saepe possimus blanditiis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quia voluptatibus laudantium aliquam! Obcaecati animi aliquid, repudiandae molestias laudantium aliquam. Eius suscipit quasi repudiandae aperiam repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id esse officia tempora cum quasi labore ea vero velit autem reiciendis!
+    </p>
+
+    <script>
+        let paras = document.querySelectorAll("p");
+        for (let el in paras) {
+            paras[el].style.color = "#bbc419";
+            paras[el].style.fontSize = "23px";
+            paras[el].style.fontFamily = "cursive";
+        }
+        let par = document.querySelector(".intro");
+        par.style.color = "";
+    </script>
+</body>
+</html>

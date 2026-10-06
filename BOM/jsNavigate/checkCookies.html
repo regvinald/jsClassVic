@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkCookieEnabled() {
+            if(navigator.cookieEnabled) {
+                alert("cookies are enabled in your browser")
+            } else{
+                alert("cookies are disabled in yoir browser")
+            }
+        }
+    </script>
+
+    <button type="button" onclick="checkCookieEnabled()">Check if cookies are enabled</button>
+</body>
+</html>

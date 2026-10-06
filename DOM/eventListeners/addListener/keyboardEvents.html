@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something"> <br><br>
+    <p id="par1"></p>
+    <input type="text" id="textInput2" placeholder="Type something"><br><br>
+    <p id="par2"></p>
+    <input type="text" id="textInput3" placeholder="Type something">
+    <p id="par3"></p>
+    <script>
+        // select the input element
+        const textInput = document.getElementById('textInput');
+        let par1 = document.getElementById('par1')
+
+        // add a keydown event listener to the input element
+        textInput.addEventListener('keydown', function(event) {
+            // log the key that was pressed
+            // console.log(`key pressed: ${event.key}`);
+            par1.innerText = event.key;
+        })
+
+        const textInput2 = document.getElementById('textInput2');
+        let par2 = document.getElementById('par2')
+        // add a keyup event listener to the next input element
+        textInput2.addEventListener('keyup', function(event) {
+            // log the key that was released
+            // console.log(`key released: ${event.key}`);
+            par2.innerText = event.key;
+        })
+
+        const textInput3 = document.getElementById('textInput3');
+        let par3 = document.getElementById('par3')
+        // add a keypress event listenet to the input element 
+        textInput3.addEventListener('keypress', function(event) {
+            // log the key that was released
+            // console.log(`key released: ${event.key}`); 
+            par3.innerText = event.key;
+        })
+    </script>
+</body>
+</html>

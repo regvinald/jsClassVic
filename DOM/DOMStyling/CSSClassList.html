@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv" class="user"></div>
+    <script>
+        let myDiv = document.getElementById('myDiv');
+        myDiv.classList.add("user-app");
+        myDiv.classList.add("my-app", "the-app");
+        myDiv.classList.remove("the-app");
+        myDiv.classList.toggle("user-app2");
+        let contain = myDiv.classList.contains('user')
+
+        console.log(contain);
+        console.log(myDiv);
+
+        if (myDiv.classLcist.contains("user-app2")) {
+            alert("The exists!!!!!!");
+        }
+
+    </script>
+</body>
+</html>

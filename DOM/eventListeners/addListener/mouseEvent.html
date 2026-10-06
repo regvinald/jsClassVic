@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"
+    style="width: 100px; height: 100px; background: lightblue;">
+</div>
+
+<script>
+    const box = document.getElementById("box");
+    box.addEventListener("mouseover", () => {
+        box.style.backgroundColor = "lightgreen";
+        box.style.width = '250px';
+        box.style.height = '250px';
+        box.style.borderRadius = '50%'
+    });
+
+    box.addEventListener("mouseout", () => {
+        box.style.backgroundColor = "lightblue";
+         box.style.width = '100px';
+        box.style.height = '100px';
+        box.style.borderRadius = '0%'
+
+    });
+</script>
+</body>
+</html>

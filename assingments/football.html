@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let clubs = new Array('Chelsea', 'Arsenal', 'Bayern', 'Barcelona', 'Burnley', 'Everton', 'Napoli', 'Udinese', 'Blackburn', 'Fernabache');
+        // clubs.filter((club)=> {
+        //     if (club.includes('n')) {
+        //     console.log(club.toUpperCase())
+        //     }
+            
+        // })
+
+        const salaries = [2123.45, 4756.87, 3456.16, 2444.45, 3445.31]
+        const newSalaries = salaries.map(salaries => salaries * 1.05)
+        console.log(newSalaries);
+
+        const sar = newSalaries.filter((salary) => salary > 3000)
+        console.log(sar);
+
+         
+
+        let sumNum =newSalaries.reduce((val , num)=> {
+            return val + num
+        })
+        console.log('Total sum = ', sumNum)
+        
+    </script>
+</body>
+</html>

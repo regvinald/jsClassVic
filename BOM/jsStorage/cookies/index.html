@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a custom function to set cookies
+        function setCookie(name, value, daysToLive) {
+            // encode value in order to escape semicolons,commas and whitespace
+            let cookie = name + "=" + encodeURIComponent(value);
+
+            if (typeof daysTOLive === "number") {
+                // sets the max age attribute so that the cookie expires after the specified number of days
+                cookie += "; max-age=" + daysToLive * 24 * 60 * 60;
+
+                document.cookie = cookie;
+            }
+        }
+        // A custom function to get cookies
+        function getCookie(name) {
+            // split cookie string and get all individual name=value pairs in an array
+            let cookieArr = document.cookie.split(";");
+
+            // loop through the array elements
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split("=");
+
+                // removing whitespace at the beginning of the cookie name and compare it with the given string
+                if(name == cookiePair[0].trim()) {
+                    // decode the cookie value and return
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            //  return null if not found
+            return null;
+        }
+
+        // let myCookies = getCookie('username')
+        // console.log(myCookies);
+        // a custom function to check cookies
+        function checkCookie() {
+            let firstName = getCookie("firstName");
+
+            if(firstName != null) {
+                alert("Welcome again, " + firstName);
+            } else {
+                firstName = prompt("please enter your first name:");
+                if(firstName != "" && firstName != null) {
+                    setCookie("firstName", firstName, 1);
+                }
+            }
+        }
+
+        // check the cookie on page load
+        window.onload = checkCookie;
+    </script>
+</body>
+</html>

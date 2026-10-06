@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const countries = new Array();
+        countries.push('Nigeria', 'Ghana', 'Morroco' , 'Senegal' , 'Egypt')
+
+        const select = document.createElement('select')
+        const option = document.createElement('option')
+
+         for (let i = 0; i <= countries.length; i++) {
+            // option.value = 'countries[i]'; 
+            option.innerText = value.countries[i];
+        }
+
+        select.appendChild(option);
+        document.body.appendChild(select);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- circle with 3 shadows -->
+     <script>
+        let circle = document.createElement('div')
+        let image = document.createElement('img')
+        image.src = 'atrandom.jpeg'
+        image.style.height = '500px'
+        image.style.width = '500px'
+        image.style.borderRadius = '360px'
+
+        circle.style.height = '500px'
+        circle.style.width = '500px'
+        circle.style.borderRadius = '360px'
+        circle.style.position = 'fixed'
+        circle.style.left = '35%'
+        circle.style.top = '15%'
+        circle.style.boxShadow = '15px 20px 30px'
+
+
+        document.body.appendChild(circle)
+        circle.appendChild(image)
+
+
+     </script>
+</body>
+</html>

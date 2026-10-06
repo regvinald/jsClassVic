@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div , p , a{
+            padding: 15px 30px;
+            display: block;
+            border: 3px solid green;
+            background-color: rgb(198, 220, 88);
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        Div Tag
+        <p class="par">
+            paragraph Tag
+            <a href="http://www.bbc.com">Anchor Tag</a>
+        </p>
+    </div>
+
+    <script>
+        function showTag() {
+            alert(`capturing Element :::: ${this.tagName}`)
+        }
+        
+        let elements = document.querySelectorAll('div , p , a')
+        for(let element of elements){
+            element.addEventListener('click' , showTag , true)
+        }
+    </script>
+</body>
+</html>
